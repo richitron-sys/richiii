@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Richie Evangelista Jimenez - Emprendimiento de Programación</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+    <header>
+        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFw8_BSPg33bQ/company-logo_200_200/company-logo_200_200/0/1699831334694?e=2147483647&v=beta&t=nuZqR3RtsNRcgYnvFzvC3mxRWa7znNfY5Ma_ZcF8lSk" alt="Colegio Jesús el Maestro" class="school-logo">
+        <h1 class="animated-title">Bienvenido a mi Emprendimiento de Programación</h1>
+        <p class="animated-text">Ofrezco servicios de desarrollo web, aplicaciones móviles y soluciones tecnológicas innovadoras.</p>
+    </header>
+
+    <section id="about" class="animated-section">
+        <h2>Lo que hago</h2>
+        <p>Soy un programador apasionado por crear soluciones innovadoras y eficientes. Me especializo en desarrollo web full-stack, aplicaciones móviles y automatización de procesos para empresas y emprendedores.</p>
+    </section>
+
+    <section id="services" class="animated-section">
+        <h2>Mis Servicios</h2>
+        <ul>
+            <li class="service-item" data-info="Desarrollo de sitios web completamente responsivos utilizando HTML, CSS y JavaScript. Incluye integración con bases de datos y optimización para SEO.">Desarrollo de sitios web responsivos y modernos</li>
+            <li class="service-item" data-info="Creación de aplicaciones web dinámicas con React para el frontend y Node.js para el backend. Soluciones escalables y eficientes.">Aplicaciones web con tecnologías como React y Node.js</li>
+            <li class="service-item" data-info="Desarrollo de aplicaciones móviles nativas e híbridas con Flutter y React Native. Compatibles con iOS y Android.">Desarrollo de apps móviles con Flutter y React Native</li>
+            <li class="service-item" data-info="Automatización de tareas repetitivas y procesos empresariales utilizando Python. Scripts personalizados para aumentar la productividad.">Automatización de procesos con Python y scripts personalizados</li>
+            <li class="service-item" data-info="Asesoramiento experto en adopción de nuevas tecnologías, transformación digital y mejores prácticas de desarrollo de software.">Consultoría en tecnología y transformación digital</li>
+        </ul>
+    </section>
+
+    <section id="buttons">
+        <button id="creator-btn" class="animated-btn">Creator</button>
+        <button id="code-btn" class="animated-btn">Code</button>
+        <button id="flowchart-btn" class="animated-btn">Diagrama de Flujo</button>
+    </section>
+
+    <footer class="animated-section">
+        <p>Contáctame para más detalles sobre mis servicios.</p>
+        <a href="https://wa.me/18296688014" target="_blank" class="whatsapp-link">
+            <i class="fab fa-whatsapp"></i> Contacta a Richie Evangelista Jimenez
+        </a>
+    </footer>
+
+    <div id="info-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <p>Más información en mi WhatsApp</p>
+            <a href="https://wa.me/18296688014" target="_blank" class="whatsapp-link popup-link">
+                <i class="fab fa-whatsapp"></i> Contactar
+            </a>
+        </div>
+    </div>
+
+    <div id="flowchart-popup" class="popup">
+        <div class="popup-content large">
+            <span class="close-btn" id="close-flowchart">&times;</span>
+            <h2>Diagrama de Flujo de Servicios</h2>
+            <div class="flowchart-schema">
+                <div class="step">Cliente</div>
+                <div class="arrow">↓</div>
+                <div class="step">Contacto por WhatsApp</div>
+                <div class="arrow">↓</div>
+                <div class="step">Selecciona Servicio</div>
+                <div class="arrow">↓</div>
+                <div class="branch">
+                    <div class="option">Web → Desarrollo Web</div>
+                    <div class="option">Móvil → Desarrollo App</div>
+                    <div class="option">Automatización → Scripting</div>
+                    <div class="option">Consultoría → Asesoría</div>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="step">Entrega Final</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

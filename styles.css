@@ -1,0 +1,342 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: #333;
+    text-align: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+header {
+    background: linear-gradient(45deg, #007bff, #28a745);
+    color: white;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.school-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.animated-title {
+    animation: fadeInUp 1s ease-out;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.animated-text {
+    animation: fadeIn 1.5s ease-out 0.5s both;
+    font-size: 1.2em;
+    margin: 10px 0 0 0;
+}
+
+section {
+    margin: 20px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    max-width: 800px;
+    animation: slideIn 1s ease-out;
+}
+
+.animated-section {
+    animation: slideIn 1s ease-out;
+}
+
+h1, h2 {
+    margin: 0 0 20px 0;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 15px 0;
+    padding: 10px;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    border-radius: 10px;
+    animation: bounceIn 0.8s ease-out, fadeOutIn 3s infinite;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.animated-btn {
+    animation: pulse 2s infinite;
+}
+
+footer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.whatsapp-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    color: #25d366;
+}
+
+.whatsapp-link i {
+    margin-right: 10px;
+    animation: bounce 1s infinite;
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 0.5s;
+}
+
+.popup-content.large {
+    max-width: 600px;
+}
+
+.flowchart-schema {
+    text-align: center;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.step {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: inline-block;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.step:nth-child(1) { animation-delay: 0s; }
+.step:nth-child(2) { animation-delay: 0.5s; }
+.step:nth-child(3) { animation-delay: 1s; }
+.step:nth-child(4) { animation-delay: 1.5s; }
+
+.arrow {
+    font-size: 24px;
+    color: #333;
+    animation: bounceIn 0.5s ease-out;
+}
+
+.arrow:nth-of-type(1) { animation-delay: 0.3s; }
+.arrow:nth-of-type(2) { animation-delay: 0.8s; }
+.arrow:nth-of-type(3) { animation-delay: 1.3s; }
+.arrow:nth-of-type(4) { animation-delay: 1.8s; }
+
+.branch {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: slideIn 1s ease-out 2s both;
+}
+
+.option {
+    background: #28a745;
+    color: white;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.option:nth-child(1) { animation-delay: 2.2s; }
+.option:nth-child(2) { animation-delay: 2.4s; }
+.option:nth-child(3) { animation-delay: 2.6s; }
+.option:nth-child(4) { animation-delay: 2.8s; }
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+.popup-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: glowPulse 2s infinite;
+}
+
+.popup-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes fadeOutIn {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 5px #25d366, 0 0 10px #25d366, 0 0 15px #25d366;
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 10px #25d366, 0 0 20px #25d366, 0 0 30px #25d366;
+        transform: scale(1.05);
+    }
+}
